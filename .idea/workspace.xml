@@ -45,9 +45,9 @@
       </RecentBranches>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2jtQ47upnPXIoSuz57IdOfXwUWs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -58,7 +58,6 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "user__profile",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/ali/Desktop/Dev/my_project/SuppBuddy/supp-buddy-2.0",
     "node.js.detected.package.eslint": "true",

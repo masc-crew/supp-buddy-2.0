@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/supp-buddy_2.0/supp-buddy_2-0.iml" filepath="$PROJECT_DIR$/supp-buddy_2.0/supp-buddy_2-0.iml" />
-=======
-      <module fileurl="file://$PROJECT_DIR$/.idea/supp-buddy-2.0.iml" filepath="$PROJECT_DIR$/.idea/supp-buddy-2.0.iml" />
->>>>>>> 7e9fca6d320b30444ee547393351ecb745a8fcd1
     </modules>
   </component>
 </project>
