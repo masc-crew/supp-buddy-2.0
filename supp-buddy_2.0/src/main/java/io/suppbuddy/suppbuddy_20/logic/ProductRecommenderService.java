@@ -14,8 +14,8 @@ import java.util.Map;
 @Service
 public class ProductRecommenderService {
 
-    private UserPersonaNutriValuesRepository userPersonaNutriValuesRepository;
-    private ProductRepository productRepository;
+    private final UserPersonaNutriValuesRepository userPersonaNutriValuesRepository;
+    private final ProductRepository productRepository;
 
     public ProductRecommenderService(UserPersonaNutriValuesRepository userPersonaNutriValuesRepository, ProductRepository productRepository) {
         this.userPersonaNutriValuesRepository = userPersonaNutriValuesRepository;
