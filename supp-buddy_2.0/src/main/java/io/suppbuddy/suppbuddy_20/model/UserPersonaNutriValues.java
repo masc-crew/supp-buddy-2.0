@@ -19,6 +19,14 @@ public class UserPersonaNutriValues {
     public UserPersonaNutriValues() {
     }
 
+    public UserPersonaNutriValues(Long uuid, int immuneHealth, int nutritionalStatus, int gutHealth, int mentalWellness) {
+        this.uuid = uuid;
+        this.immuneHealth = immuneHealth;
+        this.nutritionalStatus = nutritionalStatus;
+        this.gutHealth = gutHealth;
+        this.mentalWellness = mentalWellness;
+    }
+
     public UserPersonaNutriValues(Long id, Long uuid, int immuneHealth, int nutritionalStatus, int gutHealth, int mentalWellness) {
         this.id = id;
         this.uuid = uuid;
