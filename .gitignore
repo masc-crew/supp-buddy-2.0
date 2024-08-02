@@ -26,6 +26,11 @@ src/io/everyonecodes/java/practice/
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
 
+# try to fix .gitignore with these additions
+.idea/dataSources/*.xml
+.idea/dataSources/*.zip
+.idea/dataSources/*.meta
+
 # Gradle
 .idea/**/gradle.xml
 .idea/**/libraries
