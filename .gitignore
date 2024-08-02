@@ -3,7 +3,6 @@
 
 # practice classes
 src/io/everyonecodes/java/practice/
-src/main/resources/application-secrets.yaml
 
 # User-specific stuff
 .idea/**/workspace.xml
