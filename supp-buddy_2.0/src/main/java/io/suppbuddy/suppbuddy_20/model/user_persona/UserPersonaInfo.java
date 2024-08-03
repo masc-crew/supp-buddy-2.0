@@ -9,6 +9,9 @@ public class UserPersonaInfo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long userPersonaInfoID;
 
+    public UserPersonaInfo(Long userPersonaInfoID) {
+        this.userPersonaInfoID = userPersonaInfoID;
+    }
 
     @Column(unique = true, nullable = false)
     String uuid;
