@@ -2,6 +2,8 @@ package io.suppbuddy.suppbuddy_20.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "questions")
 public class Question {
