@@ -1,4 +1,4 @@
-package io.suppbuddy.suppbuddy_20.model;
+package io.suppbuddy.suppbuddy_20.model.questionnaire;
 
 import jakarta.persistence.*;
 
