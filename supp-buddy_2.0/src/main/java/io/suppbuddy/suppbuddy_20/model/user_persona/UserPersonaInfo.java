@@ -40,4 +40,52 @@ public class UserPersonaInfo {
         this.primaryHealthFocus = primaryHealthFocus;
         this.secondaryHealthFocus = secondaryHealthFocus;
     }
+
+    public Long getUserPersonaInfoID() {
+        return userPersonaInfoID;
+    }
+
+    public void setUserPersonaInfoID(Long userPersonaInfoID) {
+        this.userPersonaInfoID = userPersonaInfoID;
+    }
+
+    public String getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
+    }
+
+    public String getUserLifestyleType() {
+        return userLifestyleType;
+    }
+
+    public void setUserLifestyleType(String userLifestyleType) {
+        this.userLifestyleType = userLifestyleType;
+    }
+
+    public boolean isBalanced() {
+        return isBalanced;
+    }
+
+    public void setBalanced(boolean balanced) {
+        isBalanced = balanced;
+    }
+
+    public String getPrimaryHealthFocus() {
+        return primaryHealthFocus;
+    }
+
+    public void setPrimaryHealthFocus(String primaryHealthFocus) {
+        this.primaryHealthFocus = primaryHealthFocus;
+    }
+
+    public String getSecondaryHealthFocus() {
+        return secondaryHealthFocus;
+    }
+
+    public void setSecondaryHealthFocus(String secondaryHealthFocus) {
+        this.secondaryHealthFocus = secondaryHealthFocus;
+    }
 }

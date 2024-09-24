@@ -20,7 +20,7 @@ public class UserAnswerService {
         this.userAnswerRepository = userAnswerRepository;
     }
 
-    public UserAnswer saveUserAnswer(Long userId, Long questionId, Long answerId) {
+   // public UserAnswer saveUserAnswer(Long userId, Long questionId, Long answerId) {
         // How would the UserAnswer be received? Can it be received as UserAnswer, or
         // the way it is here right now??
 
@@ -40,8 +40,8 @@ public class UserAnswerService {
 //        userAnswer.setQuestion(question);
 //        userAnswer.setAnswerOption(answerOption);
 
-        return userAnswerRepository.save(userAnswer);
-    }
+       // return userAnswerRepository.save(userAnswer);
+   // }
 
     public Map<String, Integer> calculateUserScore(Long userId) {
         List<UserAnswer> answers = userAnswerRepository.findByUserId(userId); //
