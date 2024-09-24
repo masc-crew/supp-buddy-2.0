@@ -22,7 +22,7 @@ public class ProductRecommenderService {
         this.productRepository = productRepository;
     }
 
-    public List<Product> recommendProducts(Long userUuid) {
+    public List<Product> recommendProducts(String userUuid) {
         UserPersonaNutriValues nutriValues = userPersonaNutriValuesRepository.findByUuid(userUuid);
         if (nutriValues == null) {
             throw new RuntimeException("User nutrition values not found.");
