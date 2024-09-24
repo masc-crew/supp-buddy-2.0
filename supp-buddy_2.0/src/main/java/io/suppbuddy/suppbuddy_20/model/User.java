@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import java.util.Objects;
 import java.util.Set;
 import java.util.UUID;
+import java.util.Set;
+import java.util.UUID;
 
 @Entity
 public class User {
@@ -13,18 +15,22 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long privateInfoID;
 
-
     @Column(unique = true, nullable = false)
     private String uuid;
+
     private String firstName;
     private String lastName;
     private String email;
+
+    @Column(unique = true)
     private String username;
+
     private String password;
     private String gender;
     private double weight;
     private double height;
     private boolean enabled;
+
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "users_roles",
@@ -33,7 +39,7 @@ public class User {
     )
     private Set<Role> roles;
 
-    public User(double height, double weight, String gender, String password, String username, String email, String lastName, String firstName, String privateInfoID) {
+    public User(double height, double weight, String gender, String password, String username, String email, String lastName, String firstName) {
         this.height = height;
         this.weight = weight;
         this.gender = gender;
@@ -42,14 +48,14 @@ public class User {
         this.email = email;
         this.lastName = lastName;
         this.firstName = firstName;
-        this.uuid = UUID.randomUUID().toString();;
+        this.uuid = UUID.randomUUID().toString(); // Automatically generate UUID
     }
 
     public User() {
         this.uuid = UUID.randomUUID().toString(); // Generate a unique ID
     }
 
-
+    // Getters and setters for all fields
     public Long getPrivateInfoID() {
         return privateInfoID;
     }
@@ -145,5 +151,4 @@ public class User {
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
-
 }

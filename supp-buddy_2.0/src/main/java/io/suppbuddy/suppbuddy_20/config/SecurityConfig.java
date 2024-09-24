@@ -1,54 +1,64 @@
 package io.suppbuddy.suppbuddy_20.config;
 
-
-import io.suppbuddy.suppbuddy_20.service.UserServiceImpl;
-
+import io.suppbuddy.suppbuddy_20.model.User;
+import io.suppbuddy.suppbuddy_20.service.UserService;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.SecurityFilterChain;
 
-@Configuration
+import java.util.stream.Collectors;
+
 @EnableWebSecurity
+@Configuration
 public class SecurityConfig {
 
+    private final UserService userService;
 
-    private UserServiceImpl userService;
-    private PasswordEncoderUtil passwordEncoderUtil;
-
-    public SecurityConfig(PasswordEncoderUtil passwordEncoderUtil, UserServiceImpl userService) {
-        this.passwordEncoderUtil = passwordEncoderUtil;
+    public SecurityConfig(UserService userService) {
         this.userService = userService;
     }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .authorizeRequests(authorizeRequests ->
-                        authorizeRequests
-                                .antMatchers("/admin/**").hasRole("ADMIN")
-                                .antMatchers("/user/**").hasAnyRole("USER", "ADMIN")
-                                .antMatchers("/signup", "/login").permitAll()
-                                .anyRequest().authenticated()
+                .authorizeHttpRequests(authorize -> authorize // Using a lambda to configure request authorization
+                        .requestMatchers("/register", "/login").permitAll()
+                        .requestMatchers("/admin/**").hasRole("ADMIN")
+                        .anyRequest().authenticated()
                 )
-                .formLogin(formLogin ->
-                        formLogin
-                                .loginPage("/login")
-                                .permitAll()
+                .formLogin(form -> form
+                        .loginPage("/login")
+                        .defaultSuccessUrl("/", true)
                 )
-                .logout(logout ->
-                        logout.permitAll()
+                .logout(logout -> logout
+                        .logoutSuccessUrl("/login")
                 );
 
         return http.build();
     }
 
-    @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userService).passwordEncoder(passwordEncoderUtil.passwordEncoder());
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public UserDetailsService userDetailsService() {
+        return username -> {
+            User user = userService.findByUsername(username);
+            return new org.springframework.security.core.userdetails.User(
+                    user.getUsername(), user.getPassword(),
+                    user.getRoles().stream()
+                            .map(role -> new SimpleGrantedAuthority("ROLE_" + role.getName()))
+                            .collect(Collectors.toList())
+            );
+        };
     }
 }
-

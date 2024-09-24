@@ -1,8 +1,10 @@
 package io.suppbuddy.suppbuddy_20.model;
 
 import lombok.Data;
+import lombok.Getter;
 
 import java.util.UUID;
+@Getter
 @Data
 public class CustomUUID     {
 
@@ -12,7 +14,4 @@ public class CustomUUID     {
             this.value = UUID.randomUUID().toString();
         }
 
-        public String getValue() {
-            return value;
-        }
-    }
+}
