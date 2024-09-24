@@ -1,6 +1,13 @@
-# supp-buddy-2.0
+# Supp-Buddy-2.0
 
-## This is a work in progress. The bones are there, we now need to connect the individual parts each of us made.
+Customized supplements based on your health- and lifestyle needs.
+
+| **Contributors**                                                 |
+|------------------------------------------------------------------|
+| **Ali Khoshen** [GitHub](https://github.com/alikoshen)           |
+| **Sarah Fuchs** [GitHub](https://github.com/sarah-fuchs)         |
+| **Carlos R. Vasquez** [GitHub](https://github.com/carlos)        |
+| **Maximilian Morawitz** [GitHub](https://github.com/mamoraw)     |
 
 ## To Do
 
