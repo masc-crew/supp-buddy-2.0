@@ -23,17 +23,17 @@ SuppBuddy is a tool for recommending nutritional supplements. Users fill out a q
 
 ## Features
 
-| Feature                                     | Description                                                                                            | Link to the source code |
-|---------------------------------------------| ------------------------------------------------------------------------------------------------------ |-------------|
-| User Registration and Account Creation      | Individuals can sign up and create their own personalized accounts within the application, enabling a tailored experience. | [registraiton]() |
-| User Login and Password Recovery            | Registered users can easily log into their accounts, and in case they forget their password, they can initiate a secure password recovery process. | [login]() & [password]() |
-| Logout Feature                              | Users can log out from their accounts to safeguard their personal information and ensure privacy.       | [logout]()  |
-| Profile Management                          | Both volunteers and help seekers have the ability to manage their profiles. Volunteers can showcase their skills and expertise, while help seekers can update their profiles to accurately communicate their needs. | [helpseeker-profile]() & [volunteeer-profile]() |
-| Activity Creation and Publication           | Help seekers can create activities, describing the assistance they need. Once published, activities become visible to volunteers, who can browse and apply for them. | [activity]() |
-| Volunteer Application Process               | Volunteers can review published activities, submit applications, and track their application status. | [application]() |
-| Help seekers Assess and Manage Applications | Help seekers can assess and manage volunteer applications to choose the most suitable candidate.          | [manage application]() |
+| Feature                        | Description                                                                                            | Link to the source code                                                                                                                                                           |
+|--------------------------------| ------------------------------------------------------------------------------------------------------ |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Questionnaire                  | The core of the supplement recommendation process. Users fill out a questionnaire that assesses various aspects of their lifestyle, diet, and health goals, which is then used to generate personalized supplement recommendations. | [registration](https://github.com/masc-crew/supp-buddy-2.0/blob/user_profile/supp-buddy_2.0/src/main/java/io/suppbuddy/suppbuddy_20/service/UserServiceImpl.java)                 |
+| User Login | Registered users can easily log into their accounts, and in case they forget their password, they can initiate a secure password recovery process. | [login](https://github.com/masc-crew/supp-buddy-2.0/blob/user_profile/supp-buddy_2.0/src/main/java/io/suppbuddy/suppbuddy_20/communication/controller/UserController.java)        |
+| Logout Feature                 | Users can log out from their accounts to safeguard their personal information and ensure privacy.       | [logout](https://github.com/masc-crew/supp-buddy-2.0/blob/user_profile/supp-buddy_2.0/src/main/java/io/suppbuddy/suppbuddy_20/config/SecurityConfig.java)                         |
+| Product Recommendation         | The application uses the provided health and lifestyle information to recommend nutritional supplements tailored to the user's specific needs. The recommendations are generated based on the responses from the questionnaire. | [product recommendation](https://github.com/masc-crew/supp-buddy-2.0/blob/dev/supp-buddy_2.0/src/main/java/io/suppbuddy/suppbuddy_20/logic/ProductRecommenderService.java)        |
+| User Registration and Account Creation| Individuals can sign up and create their own personalized accounts within the application, enabling a tailored experience. | [registration](https://github.com/masc-crew/supp-buddy-2.0/blob/user_profile/supp-buddy_2.0/src/main/java/io/suppbuddy/suppbuddy_20/communication/controller/UserController.java) |
+| Health Data                    | Users can enter, update, and manage their health-related data, such as medical conditions, dietary restrictions, and fitness goals, which helps refine supplement suggestions.          | [health data](https://github.com/masc-crew/supp-buddy-2.0/blob/dev/supp-buddy_2.0/src/main/java/io/suppbuddy/suppbuddy_20/service/UserPersonaCalculation.java)                                                                                                                                                                   |
 
-
+The core of the supplement recommendation process. Users fill out a questionnaire that assesses various aspects of their lifestyle, diet, and health goals, which is then used to generate personalized supplement recommendations.
+Individuals can sign up and create their own personalized accounts within the application, enabling a tailored experience.
 ## Database Structure
 
 TODO: Put the diagram here.
