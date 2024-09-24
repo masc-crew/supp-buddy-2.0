@@ -1,18 +1,21 @@
 # Supp-Buddy-2.0
 
-Customized supplements based on your health- and lifestyle needs.
+SuppBuddy is a tool for recommending nutritional supplements. Users fill out a questionnaire in which various aspects of their lifestyle and diet are queried. Based on the answers, the application recommends suitable products from a database.
 
+---
 | **Contributors**                                                 |
 |------------------------------------------------------------------|
 | **Ali Khoshen** [GitHub](https://github.com/alikoshen)           |
 | **Sarah Fuchs** [GitHub](https://github.com/sarah-fuchs)         |
 | **Carlos R. Vasquez** [GitHub](https://github.com/carlos)        |
 | **Maximilian Morawitz** [GitHub](https://github.com/mamoraw)     |
+---
+## Technologies used
 
-## To Do
-
-- PRs into main
-- refactor / aline on structure and folders to use
-- make the relationships more simple if possible
-- check if yml is not on GitHub
-
+- Java 17
+- Spring Boot
+- JPA (Hibernate)
+- Spring Security
+- Spring Web
+- Integration of a SQL database
+- Unit and Integration tests
