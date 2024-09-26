@@ -32,8 +32,6 @@ SuppBuddy is a tool for recommending nutritional supplements. Users fill out a q
 | User Registration and Account Creation| Individuals can sign up and create their own personalized accounts within the application, enabling a tailored experience. | [registration](https://github.com/masc-crew/supp-buddy-2.0/blob/user_profile/supp-buddy_2.0/src/main/java/io/suppbuddy/suppbuddy_20/communication/controller/UserController.java) |
 | Health Data                    | Users can enter, update, and manage their health-related data, such as medical conditions, dietary restrictions, and fitness goals, which helps refine supplement suggestions.          | [health data](https://github.com/masc-crew/supp-buddy-2.0/blob/dev/supp-buddy_2.0/src/main/java/io/suppbuddy/suppbuddy_20/service/UserPersonaCalculation.java)                                                                                                                                                                   |
 
-The core of the supplement recommendation process. Users fill out a questionnaire that assesses various aspects of their lifestyle, diet, and health goals, which is then used to generate personalized supplement recommendations.
-Individuals can sign up and create their own personalized accounts within the application, enabling a tailored experience.
 ## Database Structure
 
 TODO: Put the diagram here.
